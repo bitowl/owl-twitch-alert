@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "channel": {
+            "type": "string",
+            "description": "The channel to watch for followers"
+        },
+        "updateFollowersInterval": {
+            "type": "number",
+            "default": 60,
+            "description": "Interval to update followers (seconds)"
+        }
+    },
+    "required": [
+        "channel"
+    ]
+}
