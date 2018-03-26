@@ -28,13 +28,15 @@ module.exports = function (nodecg) {
                 if (createdAt > newLastFollowTs) {
                     newLastFollowTs = createdAt;
                 }
+                nodecg.log.info('Last follow ts', lastFollowTsRepl.value);
+                nodecg.log.info('This follow ts', createdAt);
                 nodecg.log.info('New Follower', follow.user);
-                
+                nodecg.sendMessage('new-follow', follow.user.display_name);
                 
             }
             lastFollowTsRepl.value = newLastFollowTs;
         }).catch(err => {
-            nodecg.log.error(err);
+            nodecg.log.error('Mysterious error', err);
         });
     }
 };

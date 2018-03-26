@@ -1,0 +1,7 @@
+{
+  "name": "owl-twitch-alert",
+  "dependencies": {
+    "paper-input": "^2.2.0",
+    "paper-button": "^2.1.0"
+  }
+}
