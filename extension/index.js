@@ -2,7 +2,6 @@
 
 module.exports = function (nodecg) {
     const twitchApi = nodecg.extensions['lfg-twitchapi'];
-    console.log(nodecg.bundleConfig.updateFollowersInterval);
 
     const lastFollowTsRepl = nodecg.Replicant('lastFollowTs', { defaultValue: 0 });
     setInterval(getFollowers, nodecg.bundleConfig.updateFollowersInterval);
