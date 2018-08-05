@@ -3,8 +3,13 @@
 module.exports = function (nodecg) {
     const twitchApi = nodecg.extensions['lfg-twitchapi'];
 
+    if (twitchApi === undefined) {
+        nodecg.log.error('The lfg-twitchapi needs to be installed and configured for this bundle to work');
+        return;
+    }
+
     const lastFollowTsRepl = nodecg.Replicant('lastFollowTs', { defaultValue: 0 });
-    setInterval(getFollowers, nodecg.bundleConfig.updateFollowersInterval);
+    setInterval(getFollowers, nodecg.bundleConfig.updateFollowersInterval * 1000);
     getFollowers();
 
     function getFollowers() {
@@ -12,6 +17,7 @@ module.exports = function (nodecg) {
         twitchApi.get('/channels/' + nodecg.bundleConfig.channel + '/follows', {
             limit: 25,
         }).then(response => {
+
             if (response.statusCode !== 200) {
                 nodecg.log.error(response.body.error, response.body.message);
                 return;

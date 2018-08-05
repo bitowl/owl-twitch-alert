@@ -1,6 +1,6 @@
 {
   "name": "owl-twitch-alert",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Retrieves alerts from twitch and provides them to other bundles",
   "homepage": "https://bitowl.net",
   "author": {
@@ -19,17 +19,18 @@
     "nodecg-bundle"
   ],
   "nodecg": {
-    "compatibleRange": "~0.9.0",
+    "compatibleRange": "~1.1.0",
     "bundleDependencies": {
-      "lfg-twitchapi": "^2.0.0"
+      "lfg-twitchapi": "^2.0.0",
+      "owl-nodecg-styles": "^0.0.0"
     },
     "dashboardPanels": [
       {
         "name": "alert-test",
-        "title": "Alert Test",
+        "title": "Twitch Alert Test",
         "width": 2,
         "file": "alert-test.html",
-        "headerColor": "#9f9bbd"
+        "headerColor": "#4B367C"
       }
     ]
   },

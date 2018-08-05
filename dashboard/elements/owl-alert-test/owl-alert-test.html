@@ -1,14 +1,15 @@
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bundles/owl-nodecg-styles/dashboard/css/bitowl-theme.html">
 <dom-module id="owl-alert-test">
 	<template>
-		<style>
+		<style include="bitowl-theme">
 			:host {
 			}
         </style>
 
         <paper-input label="Username" value="{{username}}"></paper-input>
-        <paper-button on-tap="testFollow" raised>Test follow</paper-button>
+        <paper-button on-tap="testFollow" class="nodecg-benign">Test follow</paper-button>
 	</template>
 
 	<script src="owl-alert-test.js"></script>
