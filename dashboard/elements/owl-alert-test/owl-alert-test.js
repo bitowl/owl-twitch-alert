@@ -11,7 +11,6 @@
         }
 
         testFollow() {
-            console.log('test follow');
             nodecg.sendMessage('new-follow', this.username);
         }
     }
