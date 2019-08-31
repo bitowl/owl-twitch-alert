@@ -19,7 +19,7 @@
     "nodecg-bundle"
   ],
   "nodecg": {
-    "compatibleRange": "~1.1.0",
+    "compatibleRange": "^1.1.1",
     "bundleDependencies": {
       "lfg-twitchapi": "^2.0.0",
       "owl-nodecg-styles": "^0.0.0"
