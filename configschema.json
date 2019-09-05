@@ -1,17 +1,15 @@
 {
-    "type": "object",
-    "properties": {
-        "channel": {
-            "type": "string",
-            "description": "The channel to watch for followers"
-        },
-        "updateFollowersInterval": {
-            "type": "number",
-            "default": 60,
-            "description": "Interval to update followers (seconds)"
-        }
+  "type": "object",
+  "properties": {
+    "channelId": {
+      "type": "number",
+      "description": "The id of the channel to watch for followers"
     },
-    "required": [
-        "channel"
-    ]
+    "updateFollowersInterval": {
+      "type": "number",
+      "default": 60,
+      "description": "Interval to update followers (seconds)"
+    }
+  },
+  "required": ["channelId"]
 }
